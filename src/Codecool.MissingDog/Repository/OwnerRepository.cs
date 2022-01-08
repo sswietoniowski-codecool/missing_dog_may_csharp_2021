@@ -53,7 +53,9 @@ namespace Codecool.MissingDog.Repository
         /// <returns> Double, representing average level. </returns>
         public double CountAverageActivityLevelOfThisOwnersDogs(int ownerId)
         {
-            throw new NotImplementedException();
+            return GetOwnerById(ownerId)?.Dogs
+                .Where(d => (d?.Breed?.ActivityLevel).HasValue)
+                .Average(x => x.Breed.ActivityLevel) ?? 0;
         }
 
         /// <summary>
