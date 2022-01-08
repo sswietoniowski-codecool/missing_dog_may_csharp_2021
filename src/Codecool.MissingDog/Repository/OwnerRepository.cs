@@ -25,20 +25,15 @@ namespace Codecool.MissingDog.Repository
         ///     Gets all owners from data.
         /// </summary>
         /// <returns> IEnumerable of all Owners instances and nulls. </returns>
-        public IEnumerable<Owner> GetAllOwners()
-        {
-            throw new NotImplementedException();
-        }
+        public IEnumerable<Owner> GetAllOwners() => _data.Owners;
+
 
         /// <summary>
         ///     Gets specific owner with given Id.
         /// </summary>
         /// <param name="id">id</param>
         /// <returns> Owner instance or null. </returns>
-        public Owner GetOwnerById(int id)
-        {
-            throw new NotImplementedException();
-        }
+        public Owner GetOwnerById(int id) => _data?.Owners.FirstOrDefault(x => x?.Id == id);
 
         /// <summary>
         ///     Gets count of dogs of specific breed that this owner has.
