@@ -27,7 +27,7 @@ namespace Codecool.MissingDog.Repository
         /// <returns> IEnumerable of all Dogs instances and nulls. </returns>
         public IEnumerable<Dog> GetAllDogs()
         {
-            throw new NotImplementedException();
+            return _data.Dogs;
         }
 
         /// <summary>
