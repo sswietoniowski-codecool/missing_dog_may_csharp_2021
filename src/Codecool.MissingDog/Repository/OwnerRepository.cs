@@ -75,7 +75,7 @@ namespace Codecool.MissingDog.Repository
         /// <returns> Integer, representing Dogs count. </returns>
         public int CountDogsOfThisOwners(int ownerId)
         {
-            throw new NotImplementedException();
+            return GetOwnerById(ownerId)?.Dogs.Count(d => d is not null) ?? 0;
         }
     }
 }
