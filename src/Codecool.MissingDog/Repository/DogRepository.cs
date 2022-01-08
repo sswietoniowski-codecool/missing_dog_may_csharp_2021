@@ -57,7 +57,7 @@ namespace Codecool.MissingDog.Repository
         /// <returns> String, representing phone number. </returns>
         public string GetOwnerPhoneNoByDogId(int dogId)
         {
-            throw new NotImplementedException();
+            return GetDogById(dogId)?.Owner?.PhoneNumber ?? "Missing data";
         }
 
         /// <summary>
