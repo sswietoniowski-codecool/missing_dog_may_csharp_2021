@@ -67,7 +67,7 @@ namespace Codecool.MissingDog.Repository
         /// <returns> IEnumerable of Dogs instances. </returns>
         public IEnumerable<Dog> GetDogsBySociability(bool isSociable)
         {
-            throw new NotImplementedException();
+            return GetAllDogs()?.Where(d => d?.IsSociable == isSociable);
         }
     }
 }
