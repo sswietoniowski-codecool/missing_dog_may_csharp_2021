@@ -65,7 +65,7 @@ namespace Codecool.MissingDog.Repository
         /// <returns> Dog instance or null </returns>
         public Dog GetOldestDogOfThisOwner(int ownerId)
         {
-            throw new NotImplementedException();
+            return GetOwnerById(ownerId)?.Dogs.Where(d => d?.DateOfBirth is not null).OrderBy(d => d.DateOfBirth).FirstOrDefault();
         }
 
         /// <summary>
