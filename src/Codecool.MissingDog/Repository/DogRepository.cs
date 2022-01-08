@@ -37,7 +37,7 @@ namespace Codecool.MissingDog.Repository
         /// <returns> Dog instance or null. </returns>
         public Dog GetDogById(int id)
         {
-            throw new NotImplementedException();
+            return _data.Dogs?.FirstOrDefault(d => d?.Id == id);
         }
 
         /// <summary>
